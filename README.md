@@ -1,6 +1,8 @@
-📈 Business Intelligence & Dashboard Portfolio
+# 📈 Business Intelligence & Dashboard Portfolio
 
 Welcome to my Business Intelligence repository. This space highlights my ability to build automated data pipelines, model data, and design interactive dashboards that drive corporate decision-making.
+
+---
 
 ## 🛠️ BI Tech Stack
 * ETL & Data Transformation: Power Query, M Code

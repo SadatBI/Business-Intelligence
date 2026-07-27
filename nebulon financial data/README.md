@@ -29,6 +29,9 @@ After transforming the data, I pulled the baseline financial totals into the das
 *   **Runner Up:** **Electronics** brought in **$54,880.81**.
 *   **Lowest Earner:** **Office Supplies** brought in just **$17K**.
 *   **The Problem:** Every single revenue category missed its budget target. **Electronics** suffered the worst variance, missing its goal by **-$29,334.27**, followed closely by **Fashion** at **-$28,012.19**.
+ 
+![Total_Actual_Revenue by Item](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Revenue%20.png?raw=true)
+
 
 ### 2. Expense Breakdown (Where the money went)
 *   **Biggest Cost:** **Labour & Benefits** was our highest operational expense at **$86,433**.
@@ -36,10 +39,14 @@ After transforming the data, I pulled the baseline financial totals into the das
 *   **Other Operational Costs:** This was the lowest at **$36,909**.
 *   **The Variance:** On the bright side, actual expenses were actually lower than what was budgeted across the board. We saw the biggest positive savings in **Labour & Benefits**, coming in **-$27,309.75** under budget.
 
+![Total_Actual_Expenses by Item](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Revenue%20.png?raw=true)
+
+
 ### 3. Month-over-Month Trends (June vs. July)
 *   In **June**, actual expenses were higher than actual revenues.
 *   In **July**, the situation inverted nicely: actual revenues jumped up and outperformed actual expenses, showing a positive directional trend moving into the end of summer.
 
+![Total_Actual_Expenses and Total_Actual_Revenue by Month](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Revenue%20.png?raw=true)
 ---
 
 ## 💡 Quick Analyst Recommendations

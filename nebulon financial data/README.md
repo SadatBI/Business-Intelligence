@@ -10,13 +10,13 @@ Nebulon's raw financial data was structured in a way that made it incredibly dif
 ## 🛠️ Data Transformation & DAX Modeling
 To make the data usable for reporting, I unpivoted and cleaned the data in Power Query, `clean_nebulon_data.m` [here](power%20query/clean_nebulon_data.m).
 Then, to create a clean reporting table that separates actual amounts from budget amounts by item and month, `NFData.dax
-` [here](dax-NFData.dax).
+` [here](dax-measures/NFData.dax).
 
 
 ---
 
 ## 📊 High-Level Key Metrics (KPIs)
-After transforming the data, I pulled the baseline financial totals, `CalMeasures.dax`[here](dax-CalMeasures.dax) into the dashboard cards:
+After transforming the data, I pulled the baseline financial totals, `CalMeasures.dax`[here](dax-measures/CalMeasures.dax) into the dashboard cards:
 
 *   **Total Actual Expenses:** $185,762.44
 *   **Total Budgeted Expenses:** $237,979.75

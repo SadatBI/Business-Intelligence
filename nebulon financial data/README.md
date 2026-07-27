@@ -3,13 +3,13 @@
 ## ❓ The Business Problem
 Nebulon's raw financial data was structured in a way that made it incredibly difficult to build pivot tables, standard charts, or write clean DAX measures. The budget numbers and actual outcomes were tangled up together. 
 
-![excel data.png](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/excel%20data.png)
+![excel data.png](screenshots/excel%20data.png)
 
 ---
 
 ## 🛠️ Data Transformation & DAX Modeling
-To make the data usable for reporting, I unpivoted and cleaned the data in Power Query, `clean_nebulon_data.m` [here](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/power%20query/clean_nebulon_data.m).
-Then, to create a clean reporting table that separates actual amounts from budget amounts by item and month, `CalMeasures.dax` [here](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/dax-measures/CalMeasures.dax).
+To make the data usable for reporting, I unpivoted and cleaned the data in Power Query, `clean_nebulon_data.m` [here](power%20query/clean_nebulon_data.m).
+Then, to create a clean reporting table that separates actual amounts from budget amounts by item and month, `CalMeasures.dax` [here](dax-measures/CalMeasures.dax).
 
 
 ---
@@ -34,7 +34,7 @@ After transforming the data, I pulled the baseline financial totals into the das
 *   **Lowest Earner:** **Office Supplies** brought in just **$17K**.
 *   **The Problem:** Every single revenue category missed its budget target. **Electronics** suffered the worst variance, missing its goal by **-$29,334.27**, followed closely by **Fashion** at **-$28,012.19**.
  
-![Total_Actual_Revenue by Item](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Revenue%20by%20Item.png?raw=true)
+![Total_Actual_Revenue by Item](screenshots/Total_Actual_Revenue%20by%20Item.png?raw=true)
 
 
 ### 2. Expense Breakdown (Where the money went)
@@ -43,14 +43,14 @@ After transforming the data, I pulled the baseline financial totals into the das
 *   **Other Operational Costs:** This was the lowest at **$36,909**.
 *   **The Variance:** On the bright side, actual expenses were actually lower than what was budgeted across the board. We saw the biggest positive savings in **Labour & Benefits**, coming in **-$27,309.75** under budget.
 
-![Total_Actual_Expenses by Item](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Expenses%20by%20Item.png?raw=true)
+![Total_Actual_Expenses by Item](screenshots/Total_Actual_Expenses%20by%20Item.png?raw=true)
 
 
 ### 3. Month-over-Month Trends (June vs. July)
 *   In **June**, actual expenses were higher than actual revenues.
 *   In **July**, the situation inverted nicely: actual revenues jumped up and outperformed actual expenses, showing a positive directional trend moving into the end of summer.
 
-![Total_Actual_Expenses and Total_Actual_Revenue by Month](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/Total_Actual_Expenses%20and%20Total_Actual_Revenue%20by%20Month.png?raw=true)
+![Total_Actual_Expenses and Total_Actual_Revenue by Month](screenshots/Total_Actual_Expenses%20and%20Total_Actual_Revenue%20by%20Month.png?raw=true)
 ---
 
 ## 💡 Quick Analyst Recommendations
@@ -63,17 +63,18 @@ After transforming the data, I pulled the baseline financial totals into the das
 ## Open complete dashboard  
 Open the `dashboard.png` using Power BI Desktop.
 
-![dashboard.png](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/screenshots/dashboard.png)
+![dashboard.png](screenshots/dashboard.png)
 
 
-You can also view a PDF of the dashboard , `NebulonFinancialData (Power BI).pdf`. [here](https://github.com/SadatBI/Business-Intelligence/blob/main/nebulon%20financial%20data/NebulonFinancialData%20(Power%20BI).pdf).
+You can also view a PDF of the dashboard , `NebulonFinancialData (Power BI).pdf`. [here](NebulonFinancialData%20(Power%20BI).pdf).
 
 
 ---
 
 ## Files Included
-- `NebulonFinancialData (worked).pbix`: Power BI dashboard file.
-- `NebulonFinancialData.xlsx` Raw excel data from institution.
+- `NebulonFinancialData (worked).pbix`:[Power BI dashboard file.](data/NebulonFinancialData%20(worked).pbix).
+
+- `NebulonFinancialData.xlsx`: [Raw excel data from institution.](data/NebulonFinancialData.xlsx).
 - `README.md`: Project documentation.
 
 ---

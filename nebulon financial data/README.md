@@ -81,4 +81,4 @@ You can also view a PDF of the dashboard , `NebulonFinancialData (Power BI).pdf`
 ---
 
 *Thanks for checking out my financial analyst project! Feel free to connect or drop any suggestions on my layout!*
-*please contact Sadat Ibrahim at [sadatibrahim236@gmail.com](mailto:sadatibrahim236@gmail.com)*
+*please contact Sadat Ibrahim at [sadatibrahim236@gmail.com](https://google.com)*

@@ -1,0 +1,6 @@
+NFData = SUMMARIZE(
+                   'Nebulon FD','Nebulon FD'[Item],'Nebulon FD'[Revenue/Expenses],'Nebulon FD'[Month],
+                   "Actual Amount",
+                   CALCULATE(SUM('Nebulon FD'[Amount]),'Nebulon FD'[Actual/Budget]="Actual"),
+                   "Budget Amount",
+                   CALCULATE(SUM('Nebulon FD'[Amount]),'Nebulon FD'[Actual/Budget]="Budget"))

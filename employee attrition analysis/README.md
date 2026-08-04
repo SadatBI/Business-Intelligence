@@ -66,6 +66,7 @@ Based on the dashboard insights, Beliv-Augmenta should prioritize these 3 action
 ## Files Included
 
 - `Final Work.pbix`:[Power BI dashboard file.](Docs/Final%20Work.pbix).
+- `B.A_Final work`:[Power BI PDF file.](B.A_Final%20work.pdf).
 
 ---
 

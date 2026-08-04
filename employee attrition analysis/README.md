@@ -1,50 +1,74 @@
-# Employee Attrition Analysis
+# 📊 Beliv-Augmenta Employee Attrition & Performance Analysis
 
-## ❓ The Problem
-High attrition rates cost companies a lot of money in hiring and training, and it hurts team morale. Biliv-Augmenta has been losing staff, and my goal was to use Power BI to dig through our employee data, find the patterns behind why people resign, and give our HR team some practical ideas to fix it.
-
----
-
-* **Tool Used:** Power BI Desktop
-* **Skills Practiced:** Data modeling, writing DAX formulas, choosing the right charts, and data storytelling.
+## 📌 Project Overview
+Employee attrition—the loss of staff due to resignation or retirement—creates heavy organizational costs and drains institutional knowledge. As a Data Analyst at **Beliv-Augmenta**, this project focuses on identifying core drivers behind employee turnover. By transforming messy workforce data into actionable insights, this Power BI interactive dashboard helps HR leaders shift from **reactive hiring** to **proactive retention strategies**.
 
 ---
 
-## 📊 Quick Numbers (The KPIs)
-When I first loaded the data, I pulled these high-level metrics to understand the current state of the company:
-* **Total Employees Ever Tracked:** 1,470
-* **Current Active Employees:** 1,233
-* **Employees Who Left (Inactive):** 237
-* **Overall Attrition Rate:** 16.1%
-* **Age Range:** Our youngest employee is 18, and our oldest is 51.
+## 🏗️ Data Architecture & Star Schema
+The project relies on an optimized **Star Schema** to ensure clean filtering and high DAX performance. It is split into **4 Dimension Tables** and **1 Central Fact Table**:
+
+*   **`FactPerformanceRating`**: Holds historical performance records, timeline logs (`ReviewDate`), manager ratings, self-evaluations, and workplace tracking metrics.
+*   **`DimEmployee`**: Contains demographic details (Age, Gender, Marital Status, Ethnicity), department structures, and office variables (Distance from home, Overtime status).
+*   **`DimDate`**: The master calendar dimension enabling clean time-intelligence trends across fiscal years.
+*   **`DimRatingLevel` & `DimSatisfiedLevel`**: Standardized lookups that map numerical survey scores to clear descriptive tiers.
+*   **`Calmeasures`**: A dedicated folder keeping key KPI calculations organized and separate from physical rows.
+
+### 🔗 Relationships & Modeling
+*   `DimEmployee` connects to `FactPerformanceRating` on `EmployeeID` (1 to * Relationship).
+*   `DimDate` connects to `FactPerformanceRating` on `Date` to `ReviewDate` (1 to * Relationship).
+*   `DimEducationLevel`, `DimRatingLevel`, and `DimSatisfiedLevel` serve as lookup tables to unpack fact and dimension keys.
+<img src="Screenshots/Modelling.png" width="60%">
 
 ---
 
-## 🔍 What the Data Told Me (My Insights)
+## 📊 Dashboard Insights Breakdown
 
-After building out the charts, a few major trends really jumped out at me:
+### 1. Executive Summary (Overview)
+*   **Baseline Workforce**: The company currently monitors **1,470 total employees**, maintaining an active headcount of **1,233** alongside **237 historic exits**.
+*   **The Problem Metric**: The company-wide **Attrition Rate sits at 16.1%**. 
+*   **Department Concentration**: **Technology** accounts for the massive majority of active headcount, followed by Sales and a minimal Human Resources footprint.
 
-### 1. Burnout is a Real Issue
-* **The Overtime Trap:** This was the biggest shocker. Employees who work overtime have an attrition rate of **over 30%**. For people who don't work overtime, it is only around 10%. 
-* **Too Much Travel:** People who have to travel frequently for business have a much higher turnover rate (~25%) than those who rarely or never travel (~7%).
+<img src="Screenshots/Overview.png" width="60%">
 
-### 2. The "New Guy" Vulnerability
-* **Manager Issues:** I noticed that attrition peaks heavily at **25%** during an employee's very first year (`Year 0`) with a new manager. Once they work together for 3 or 4 years, that number drops below 5%. Early relationships matter!
-* **The Promotion Cliff:** Interestingly, right after someone gets a promotion or starts a new role (`Year 0` since last promotion), the turnover rate spikes close to **40%**. It seems employees are highly likely to leave if they feel stuck immediately following a major transition.
+### 2. Deep Dive: Key Attrition Drivers
+*   **The Overtime Trap**: Employees clocking **Overtime** exhibit a striking **~30% attrition rate**, compared to just ~10% for standard hour workers. This flags immediate burnout risks.
+*   **Tenure & Experience**: Turnover heavily spikes during an employee's **very first year (over 30%)** and stabilizes downward past year 5. Onboarding and early-career support need attention.
+*   **Age Demographics**: Younger professionals aged **20-29** experience the highest attrition (~21%).
+*   **Departmental Breakdown**: **Sales** leads organizational departures at over 20%, slightly edging past HR.
+*   **Commute Distance**: A clear correlation shows that long-distance commutes (>35 KM) introduce massive volatility and a higher likelihood of resignation.
 
-### 3. Who is Leaving Most?
-* **By Department:** Our **Sales** department has the highest turnover rate (over 20%), with **Human Resources** right behind it (~19%). **Technology** is our most stable department (~14%).
-* **By Demographics:** The vast majority of our workforce sits in the **20-29 age group** (874 employees). Because this group is so large, their high tendency to change jobs is driving most of our overall attrition. Also, single employees leave at a much higher rate than married or divorced staff.
+<img src="Screenshots/Attrition.png" width="60%">
+
+### 3. Workplace Demographics
+*   **Age Clusters**: The workforce is heavily concentrated in the **20-29 age category** (874 employees).
+*   **Marital Status**: Married professionals represent the largest group (624), followed closely by single employees (549).
+*   **Compensation Equity**: Pay structure averages out reasonably stable around the \$100k–\$115k band across primary ethnic groups, mitigating major compensation anomalies.
+
+<img src="Screenshots/Demographics.png" width="60%">
 
 ---
 
-##💡 My Recommendations for HR
-
-Based on the charts, here is what I think we should suggest to the leadership team:
-1. **Fix the Overtime Culture:** We need to keep an eye on teams working late. If a department is consistently hitting that 30% turnover mark, it is time to hire more help or redistribute the work.
-2. **Focus on New Managers:** HR should set up check-ins during the first 90 days when an employee gets paired with a new manager to help build a smooth relationship.
-3. **Re-evaluate Sales Roles:** Since Sales is losing the most people, we should look into their commission structures or travel expectations to see if we can make frequent travel a bit easier on them.
+## 🛠️ Tech Stack & Skills Highlighted
+*   **Tool**: Microsoft Power BI Desktop
+*   **Modeling**: Star Schema, Relationships (1-to-Many), Cross-filtering directions.
+*   **DAX Operations**: Custom Explicit Measures for `Attrition Rate`, `Active Employees`, and `Inactive Employees`.
 
 ---
 
-*Thank you for checking out my project! Feel free to connect with me or leave feedback on my dashboard layout!*
+## 🚀 Actionable HR Recommendations
+Based on the dashboard insights, Beliv-Augmenta should prioritize these 3 actions:
+1.  **Overtime Cap & Audit**: Investigate teams where Overtime is exceeding normal limits. Redraw resource plans to prevent extreme burnout.
+2.  **First-Year Mentorships**: Build a dedicated 90-day onboarding and check-in system specifically targeting the high "Year 0 to 1" flight risk.
+3.  **Flexible/Remote Commute Policies**: Implement hybrid schedules or transportation stipends for employees traveling long distances to lower commute stress.
+
+
+## Files Included
+
+- `Final Work.pbix`:[Power BI dashboard file.](Docs/Final%20Work.pbix).
+
+---
+
+*Thanks for checking out my financial analyst project! Feel free to connect or drop any suggestions on my layout!*
+*please contact Sadat Ibrahim at [sadatibrahim236@gmail.com](mailto:sadatibrahim236@gmail.com)*
+

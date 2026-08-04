@@ -7,7 +7,7 @@ Welcome to my Business Intelligence repository. This space highlights my ability
 ## 🛠️ BI Tech Stack
 * ETL & Data Transformation: Power Query, M Code
 * Data Modeling & Calculations: DAX (Data Analysis Expressions), Star Schema
-* Visualization: Power BI Desktop, Microsoft Excel
+* Visualization: Power BI Desktop
 
 ---
 

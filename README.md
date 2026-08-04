@@ -20,7 +20,8 @@ An interactive Power BI dashboard designed to track key financial health metrics
 * Value Delivered: Created a single source of truth for financial stakeholders to monitor monthly performance trends.
 
 ### 2. Employee attritiom data
-A complete business intelligence project demonstrating the full ETL (Extract, Transform, Load) lifecycle.
-* Key Focus: Data cleaning, automated data transformation, and relational data modeling.
-* Tools Used: Power Query (for data restructuring and cleaning), Power BI (for reporting).
-* Value Delivered: Automated a repetitive manual Excel cleaning process into a dynamic, one-click refreshable dashboard.
+An end-to-end business intelligence project demonstrating the full ETL (Extract, Transform, Load) lifecycle to analyze employee turnover trends.
+
+* **Key Focus**: Data cleaning, automated data transformation, and optimized star schema relational data modeling.
+* **Tools Used**: Power Query (for data engineering and transformation), Power BI Desktop (for data modeling, DAX calculations, and interactive reporting).
+* **Value Delivered**: Automated a messy, multi-table workforce dataset into a structured, one-click refreshable dashboard that helps HR leaders transition from reactive hiring to proactive talent retention

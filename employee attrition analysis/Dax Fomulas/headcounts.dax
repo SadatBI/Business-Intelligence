@@ -1,0 +1,22 @@
+// Calculates the total of employees (active + departed)
+Total Employees = CALCULATE(
+    COUNTA(DimEmployee[EmployeeID]),
+    USERELATIONSHIP(DimEmployee[HireDate], DimDate[Date])
+)
+
+
+// Tracks current workforce active on the payroll
+Active Employees = 
+CALCULATE(
+    [Total Employees], 
+    DimEmployee[Attrition] = "No"
+)
+
+
+// Counts employees who have left the organization
+Inactive Employees = 
+CALCULATE(
+    [Total Employees], 
+    DimEmployee[Attrition] = "Yes"
+)
+

@@ -1,0 +1,3 @@
+ActiveEmployees = CALCULATE(
+  [Total Employees], DimEmployee[Attrition] = "No"
+)

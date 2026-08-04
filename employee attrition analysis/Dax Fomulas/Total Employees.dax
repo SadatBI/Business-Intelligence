@@ -1,4 +1,0 @@
-Total Employees = CALCULATE(
-    COUNTA(DimEmployee[EmployeeID]),
-    USERELATIONSHIP(DimEmployee[HireDate], DimDate[Date])
-)

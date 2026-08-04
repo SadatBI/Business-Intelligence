@@ -1,0 +1,22 @@
+
+// Calculates the percentage of employee turnover against total workforce
+Attrition_Rate = CALCULATE(
+    DIVIDE([InactiveEmployees], [Total Employees]),
+    USERELATIONSHIP(DimEmployee[HireDate],DimDate[Date])
+)
+
+
+// Calculates the employee's attrition status
+Attrition_Status = 
+if (HASONEVALUE(DimEmployee[Full name]),
+SELECTEDVALUE(DimEmployee[Attrition]),
+"-"
+)
+
+
+// Calculates the employee's Overtime status
+Overtime = 
+if (HASONEVALUE(DimEmployee[Full name]),
+SELECTEDVALUE(DimEmployee[OverTime]),
+"-"
+)
